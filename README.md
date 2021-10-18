@@ -38,6 +38,12 @@ docker run \
 
 ## About the scripts
 
+- `run_analysis.sh` - This main bash script runs the both steps of the analysis by calling the `00` and `01` scripts.
+
+- `00-download-data.py` - This script uses the python client for the refine.bio API to download the processed and normalized data that is used to make a heatmap.
+
+- `01-heatmap.Rmd` - This Rmd notebook takes the data that is downloaded by `00-download-data.py` and creates a heatmap that is saved to `plots/aml_heatmap.png`.
+
 ## Input
 
 The [data used by this analysis](dataset can be downloaded from this page on refine.bio](https://www.refine.bio/experiments/SRP070849) is downloaded [processed and quantile normalized](http://docs.refine.bio/en/latest/main_text.html#refine-bio-processed-refinebio-processedibadge) from refine.bio using their API.
