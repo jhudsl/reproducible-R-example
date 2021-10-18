@@ -5,7 +5,7 @@ It can be used as a template or otherwise borrowed from.
 
 _This example analysis:_  
 
-- Downloads [data from refine.bio](https://www.refine.bio/experiments/SRP070849/combination-targeted-therapy-to-disrupt-aberrant-oncogenic-signaling-and-reverse-epigenetic-dysfunction-in-idh2-and-tet2-mutant-acute-myeloid-leukemia-rna-seq)
+- Downloads [data from refine.bio](https://www.refine.bio/experiments/SRP070849/combination-targeted-therapy-to-disrupt-aberrant-oncogenic-signaling-and-reverse-epigenetic-dysfunction-in-idh2-and-tet2-mutant-acute-myeloid-leukemia-rna-seq) using the [refine.bio python API client](https://github.com/AlexsLemonade/refinebio-py).
 - Identifies the top 90th percentile variant genes from the set.
 - Creates and saves a heatmap from those genes.
 
