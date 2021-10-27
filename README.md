@@ -44,17 +44,34 @@ docker run \
 
 - `01-heatmap.Rmd` - This Rmd notebook takes the data that is downloaded by `00-download-data.py` and creates a heatmap that is saved to `plots/aml_heatmap.png`.
 
-## Input
+### Input
 
 The [data used by this analysis](dataset can be downloaded from this page on refine.bio](https://www.refine.bio/experiments/SRP070849) is downloaded [processed and quantile normalized](http://docs.refine.bio/en/latest/main_text.html#refine-bio-processed-refinebio-processedibadge) from refine.bio using their API.
 It is RNA-seq data from 19 acute myeloid leukemia (AML) mice models.
 
-## Output
+### Output
 
 Two directories are created by this analysis and hold the output:  
 
 `plots/` - contains the heatmap png: `aml_heatmap.png`
 `results/` - contains the TSV file list of most variant genes: `top_90_var_genes.tsv`
+
+## renv
+
+Package management for this project is done with renv.
+[If you don't have renv, you will need to install that first](https://rstudio.github.io/renv/articles/renv.html) with `install.packages("renv")`.
+
+Follow the workflow describe by the renv introduction, but realizing that this repository already has an `renv` project initialized.
+So in the `Console` window:
+
+1. Use `renv::restore()` to load in the packages from the current `renv.lock` file.
+
+> 2. Work in the project as normal, installing and removing new R packages as they are needed in the project,
+> 3. Call renv::snapshot() to save the state of the project library to the lockfile (called renv.lock),
+> 4. Continue working on your project, installing and updating R packages as needed.
+> 5. Call renv::snapshot() again to save the state of your project library if your attempts to update R packages were successful, or call renv::restore() to revert to the previous state as encoded in the lockfile if your attempts to update packages introduced some new problems.
+
+Be sure to add the `renv.lock` file to any commits and pull requests since that's what has stored the package changes to your environment!
 
 ## Docker
 

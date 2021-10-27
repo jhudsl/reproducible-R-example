@@ -13,13 +13,8 @@ RUN pip3 install \
 
 # Commonly used R packages
 RUN Rscript -e  "install.packages( \
-    c('png', \
-      'reticulate', \
-      'DESEq2', \
+    c('renv', \
       'pheatmap'))"
-
-# Install miniconda
-RUN R -e "reticulate::install_miniconda(path = reticulate::miniconda_path())"
 
 # Set final workdir for commands
 WORKDIR /home/rstudio
