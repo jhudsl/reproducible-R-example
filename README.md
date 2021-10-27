@@ -61,10 +61,11 @@ Two directories are created by this analysis and hold the output:
 Package management for this project is done with renv.
 [If you don't have renv, you will need to install that first](https://rstudio.github.io/renv/articles/renv.html) with `install.packages("renv")`.
 
-Follow the workflow describe by the renv introduction:
-> The general workflow when working with renv is:
+Follow the workflow describe by the renv introduction, but realizing that this repository already has an `renv` project initialized.
+So in the `Console` window:
 
-> 1. Call renv::init() to initialize a new project-local environment with a private R library,
+1. Use `renv::restore()` to load in the packages from the current `renv.lock` file.
+
 > 2. Work in the project as normal, installing and removing new R packages as they are needed in the project,
 > 3. Call renv::snapshot() to save the state of the project library to the lockfile (called renv.lock),
 > 4. Continue working on your project, installing and updating R packages as needed.
