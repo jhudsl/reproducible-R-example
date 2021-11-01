@@ -12,12 +12,12 @@ _This analysis has been adapted from this [refine.bio-examples notebook](https:/
 
 # Purpose of the analysis
 
-In this analysis, we will use this [acute myeloid leukemia sample dataset](https://www.refine.bio/experiments/SRP070849) from [Shih et al, 2017](https://pubmed.ncbi.nlm.nih.gov/28193779/) and pre-processed by [refinebio](https://www.refine.bio/).
+In this analysis, we will use this [acute myeloid leukemia sample dataset](https://www.refine.bio/experiments/SRP070849) from [Shih et al., 2017](https://pubmed.ncbi.nlm.nih.gov/28193779/) and pre-processed by [refinebio](https://www.refine.bio/).
 
 The data that we downloaded from [refine.bio](https://www.refine.bio/) for this analysis has 19 samples (obtained from 19 acute myeloid leukemia (AML) model mice), containing RNA-sequencing results for types of AML under controlled treatment conditions.
 
 This [dataset can be downloaded from this page on refine.bio](https://www.refine.bio/experiments/SRP070849).
-We will download it already [processed and quantile normalized](http://docs.refine.bio/en/latest/main_text.html#refine-bio-processed-refinebio-processedibadge). 
+We will download it already [processed and quantile normalized](http://docs.refine.bio/en/latest/main_text.html#refine-bio-processed-refinebio-processedibadge).
 
 ## Set up analysis folders
 
@@ -60,7 +60,7 @@ metadata_file <- file.path(data_dir, "metadata_SRP070849.tsv")
 
 ## Install libraries
 
-We will use `pheatmap` [@Slowikowski2017] for clustering and creating a heatmap.
+We will use []`pheatmap` by Slowikowski et al., 2017](https://www.rdocumentation.org/packages/pheatmap/versions/1.0.12/topics/pheatmap) for clustering and creating a heatmap.
 
 ```{r}
 if (!("pheatmap" %in% installed.packages())) {
@@ -140,7 +140,7 @@ readr::write_tsv(df_by_var, file.path(results_dir, "top_90_var_genes.tsv"))
 
 ## Prepare metadata for annotation
 
-From the accompanying [paper](https://pubmed.ncbi.nlm.nih.gov/28193779/), we know that the mice with `IDH2` mutant AML were treated with vehicle or AG-221 (the first small molecule in-vivo inhibitor of IDH2 to enter clinical trials) and the mice with `TET2` mutant AML were treated with vehicle or 5-Azacytidine (Decitabine, hypomethylating agent). [@Shih2017]
+From the accompanying [paper](https://pubmed.ncbi.nlm.nih.gov/28193779/), we know that the mice with `IDH2` mutant AML were treated with vehicle or AG-221 (the first small molecule in-vivo inhibitor of IDH2 to enter clinical trials) and the mice with `TET2` mutant AML were treated with vehicle or 5-Azacytidine (Decitabine, hypomethylating agent) [Shih et al., 2017](https://pubmed.ncbi.nlm.nih.gov/28193779/).
 
 ```{r}
 # Let's prepare the annotation for the uncollapsed `DESeqData` set object
