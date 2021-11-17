@@ -18,3 +18,5 @@ RUN Rscript -e  "install.packages( \
 
 # Set final workdir for commands
 WORKDIR /home/rstudio
+
+ENV USER="rstudio" PASSWORD="rstudio" ROOT="TRUE"
