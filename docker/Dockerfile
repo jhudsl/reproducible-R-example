@@ -9,7 +9,7 @@ RUN apt-get -y --no-install-recommends install \
   python3-pip  python3-dev
 
 RUN pip3 install \
-  "pyrefinebio"
+  pyrefinebio --break-system-packages
 
 # Commonly used R packages
 RUN Rscript -e  "install.packages( \
@@ -19,4 +19,4 @@ RUN Rscript -e  "install.packages( \
 # Set final workdir for commands
 WORKDIR /home/rstudio
 
-ENV USER="rstudio" PASSWORD="rstudio" ROOT="TRUE"
+ENV USER="rstudio" ROOT="TRUE"
