@@ -10,6 +10,7 @@ RUN apt-get -y --no-install-recommends install \
 
 RUN pip3 install \
   "pyrate-limiter==3.0.0" \
+  Redis \
   pyrefinebio  --break-system-packages
 
 # Commonly used R packages
