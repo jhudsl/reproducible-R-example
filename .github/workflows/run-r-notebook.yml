@@ -19,7 +19,7 @@ jobs:
     steps:
       # We need to tell github actions to use the code on the branch we are on
       - name: checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           # How deep should it fetch?
           fetch-depth: 0
