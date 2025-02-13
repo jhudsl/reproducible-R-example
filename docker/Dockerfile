@@ -9,6 +9,7 @@ RUN apt-get -y --no-install-recommends install \
   python3-pip  python3-dev
 
 RUN pip3 install \
+  pyrate_limiter \
   pyrefinebio --break-system-packages
 
 # Commonly used R packages
