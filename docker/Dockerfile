@@ -9,7 +9,7 @@ RUN apt-get -y --no-install-recommends install \
   python3-pip  python3-dev
 
 RUN pip3 install \
-  "pyrate-limiter==2.7.0" \
+  "pyrate-limiter==2.10.0" \
   redis \
   pyrefinebio  --break-system-packages
 
