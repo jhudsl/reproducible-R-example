@@ -8,8 +8,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends apt-utils dialo
 RUN apt-get -y --no-install-recommends install \
   python3-pip  python3-dev
 
+# Install refine bio and dependencies
 RUN pip3 install \
-  "pyrate-limiter==2.7.0" \
+  "pyrate-limiter==2.10.0" \
   redis \
   pyrefinebio  --break-system-packages
 
